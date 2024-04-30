@@ -26,7 +26,6 @@ async def start(client, message):
                 InlineKeyboardButton(
                     "Repository 🦄", url="https://github.com/XronTrix10/Telegram-Leecher"
                 ),
-                InlineKeyboardButton("Support 💝", url="https://t.me/Colab_Leecher"),
             ],
         ]
     )
@@ -155,7 +154,7 @@ async def handle_url(client, message):
             ]
         )
         await message.reply_text(
-            text="<b>◲ Choose COLAB LEECHER Operation MODE For This Current Task 🍳 »</b>",
+            text="<b>◲ Choose LEECHER Operation MODE For This Current Task 🍳 »</b>",
             reply_markup=keyboard,
             quote=True,
         )
