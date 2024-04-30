@@ -1,4 +1,4 @@
-# copyright 2023 © Xron Trix | https://github.com/Xrontrix10
+
 
 
 import re
@@ -119,5 +119,5 @@ async def on_output(output: str):
             eta,
             downloaded_bytes,
             total_size,
-            "Aria2c 🧨",
+            "Aria2c",
         )
