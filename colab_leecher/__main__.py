@@ -1,4 +1,4 @@
-# copyright 2023 © Xron Trix | https://github.com/Xrontrix10
+# copyright 2023 © Xron Trix | 
 
 
 import logging, os
@@ -24,7 +24,7 @@ async def start(client, message):
         [
             [
                 InlineKeyboardButton(
-                    "Repository 🦄", url="https://github.com/XronTrix10/Telegram-Leecher"
+                    "Repository 🦄", url="https://github.com/"
                 ),
             ],
         ]
