@@ -144,7 +144,15 @@ def videoExtFix(file_path: str):
     else:
         os.rename(file_path, ospath.join(file_path + ".mp4"))
         return ospath.join(file_path + ".mp4")
-
+def convertIMG(image_path):
+    image = Image.open(image_path)
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+    output_path = ospath.splitext(image_path)[0] + ".jpg"
+    image.save(output_path, "JPEG")
+    os.remove(image_path)
+    return output_path
+    
 
 def thumbMaintainer(file_path):
     if ospath.exists(Paths.VIDEO_FRAME):
@@ -164,7 +172,7 @@ def thumbMaintainer(file_path):
         print(f"Thmb Gen ERROR: {e}")
         if ospath.exists(Paths.THMB_PATH):
             return Paths.THMB_PATH, 0
-        return Paths.HERO_IMAGE, 0
+        
 
 
 async def setThumbnail(message):
